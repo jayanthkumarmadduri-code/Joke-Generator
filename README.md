@@ -9,10 +9,14 @@ This project contains both a **Beautiful Frontend** and a **Custom Joke API**.
 ## 🚀 How to Run
 
 ### Live demo (GitHub Pages)
-After deployment, open: **https://jayanthkumarmadduri-code.github.io/Joke-Generator/**
+**https://jayanthkumarmadduri-code.github.io/Joke-Generator/**
 
-If the deploy workflow fails with a Pages "Not Found" error, enable it once manually:
-**Settings → Pages → Build and deployment → Source: GitHub Actions**, then re-run the workflow from the **Actions** tab.
+One-time setup (if you see a 404):
+1. Wait for the **Deploy to GitHub Pages** workflow to finish with a green check on the [Actions](https://github.com/jayanthkumarmadduri-code/Joke-Generator/actions) tab.
+2. Open **Settings → Pages** on the repo.
+3. Under **Build and deployment**, set **Source** to **Deploy from a branch**.
+4. Choose branch **`gh-pages`**, folder **`/ (root)`**, then **Save**.
+5. Wait 1–2 minutes and refresh the live URL.
 
 ### 1. View the Frontend
 Simply open `index.html` in your browser to see the premium joke generator in action. On GitHub Pages it uses [JokeAPI](https://jokeapi.dev); locally it uses your custom API.
