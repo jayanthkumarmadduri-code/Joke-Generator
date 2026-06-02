@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Joke Generator | Premium Edition</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <video autoplay muted loop id="bg-video">
+        <source src="Joke BG.mp4" type="video/mp4">
+    </video>
+    <audio id="laugh-sound">
+        <source src="happy child laughing.wav" type="audio/wav">
+    </audio>
+    <div class="overlay"></div>
+    <div class="container">
+        <div class="joke-card" id="joke-card">
+            <div class="icon">😂</div>
+            <h1>Bored? Have a Laugh!</h1>
+            
+            <div id="joke-content">
+                <p id="setup" class="setup">Click the button for a fresh joke...</p>
+                <p id="delivery" class="delivery"></p>
+            </div>
+
+            <button id="joke-btn" class="btn">
+                <span id="btn-text">Get New Joke</span>
+                <div id="loader" class="loader"></div>
+            </button>
+
+            <div class="footer">
+                Powered by JokeAPI
+            </div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
