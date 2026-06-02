@@ -5,18 +5,32 @@ const btnText = document.getElementById('btn-text');
 const loader = document.getElementById('loader');
 const laughSound = document.getElementById('laugh-sound');
 
+const isLocalDev =
+    window.location.hostname === 'localhost' ||
+    window.location.hostname === '127.0.0.1';
+
 /**
  * Simple Joke API Module
- * This represents the "Joke API" logic
+ * Local: custom API via server.py / local-api
+ * GitHub Pages: public JokeAPI (https://jokeapi.dev)
  */
 const JokeAPI = {
-    endpoint: 'http://localhost:3000/api/joke',
-    
+    get endpoint() {
+        return isLocalDev
+            ? '/api/joke'
+            : 'https://v2.jokeapi.dev/joke/Any?safe-mode';
+    },
+
     async getRandomJoke() {
         try {
             const response = await fetch(this.endpoint);
             if (!response.ok) throw new Error('Network response was not ok');
-            return await response.json();
+            const data = await response.json();
+
+            if (isLocalDev) {
+                return { setup: data.setup, delivery: data.delivery };
+            }
+            return data;
         } catch (error) {
             console.error('Fetch error:', error);
             return {

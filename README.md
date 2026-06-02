@@ -8,8 +8,11 @@ This project contains both a **Beautiful Frontend** and a **Custom Joke API**.
 
 ## 🚀 How to Run
 
+### Live demo (GitHub Pages)
+After deployment, open: **https://jayanthkumarmadduri-code.github.io/Joke-Generator/**
+
 ### 1. View the Frontend
-Simply open `index.html` in your browser to see the premium joke generator in action. It currently uses a public API for a wide variety of jokes.
+Simply open `index.html` in your browser to see the premium joke generator in action. On GitHub Pages it uses [JokeAPI](https://jokeapi.dev); locally it uses your custom API.
 
 ### 2. Run the Local API
 If you want to use your OWN API:
